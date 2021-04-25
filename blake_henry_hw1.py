@@ -1,5 +1,14 @@
 # I ran this through using windows powershell and typing the filename into the cmd line to run
-year = int(input("Enter year: "))
+while True:
+	year = input("Enter year: ")
+
+	try:
+		year = int(year)
+	except:
+		print("Please enter a number")
+		continue
+	else:
+		break
 
 if (year%4) == 0:
 	if (year%100) == 0:
